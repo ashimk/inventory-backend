@@ -39,6 +39,14 @@ func main() {
 	router.POST("/search", h.SearchHandle)
 	router.DELETE("/delete", h.DeleteHandle)
 
+	go func() {
+		err = router.Run(":" + config.HttpPort)
+		fmt.Printf("Starting HTTPS server on port ...", config.HttpPort)
+		if err != nil {
+			log.Fatalf("error in starting server , err:%v", err)
+		}
+	}()
+
 	tlsConfig, err := getTLSConfig()
 	if err != nil {
 		fmt.Println("Error loading TLS config:", err)
@@ -56,11 +64,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error starting HTTPS server:", err)
 	}
-
-	//err = router.Run(":" + config.ServerPort)
-	//if err != nil {
-	//	log.Fatalf("error in starting server , err:%v", err)
-	//}
 }
 
 func getTLSConfig() (*tls.Config, error) {

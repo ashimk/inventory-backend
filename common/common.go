@@ -15,6 +15,7 @@ type Config struct {
 	DbName     string `json:"db_name"`
 	DbUrl      string `json:"db_url"`
 	ServerPort string `json:"server_port"`
+	HttpPort   string `json:"http_port"`
 }
 
 func ReadConfig() (config *Config, err error) {
