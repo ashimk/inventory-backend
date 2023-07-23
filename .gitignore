@@ -1,0 +1,9 @@
+./bin/
+config.json
+server.crt
+server.key
+vendor
+.DS_Store
+.idea
+
+
