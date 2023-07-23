@@ -74,3 +74,7 @@ Please refer to the source code for more details on the request and response for
 
 - Go: Backend programming language for building the API.
 - Gorilla Mux: Router and dispatcher library for building RESTful APIs in Go.
+
+## Architecture Diagram
+![Architecture Image](https://github.com/ashimk/inventory-backend/blob/f2b8f1fd245539a1ace68237417663ff123d054d/Screenshot%202023-07-24%20at%207.12.00%20AM.png)
+
