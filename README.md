@@ -1,5 +1,3 @@
-Sure! Here's a sample README file for the backend of the Appliance Management application based on the repository you provided:
-
 # Appliance Management Backend
 
 This is the backend part of the Appliance Management application. It provides a RESTful API for managing and searching appliances.
